@@ -32,7 +32,7 @@ header {
 .nav {
 	margin:  0 auto;
 	padding-left: 0;
-	width: 75%;
+	max-width: 75%;
 }
 
 .nav  a {
@@ -192,6 +192,10 @@ footer {
 	box-shadow: -2px 4px 7px 2px rgba(0,0,0,0.75);
 }
 
+.contact-container {
+	display: none;
+}
+
 #contact-png {
 	width:50%;
 	margin: 2em 25% 1em 25%;
@@ -239,6 +243,9 @@ footer {
 .contact-text {
 	padding-left: 10%;
 	padding-right:10%;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
 	text-align: center;
 	font-style: italic;
 }
@@ -270,14 +277,7 @@ p, a, li {
 }
 
 body {
-background: rgba(255,255,255,1);
-background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(145,232,66,1) 100%);
-background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(50%, rgba(255,255,255,1)), color-stop(100%, rgba(145,232,66,1)));
-background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(145,232,66,1) 100%);
-background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(145,232,66,1) 100%);
-background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(145,232,66,1) 100%);
-background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(145,232,66,1) 100%);
-filter: gradient( startColorstr='#ffffff', endColorstr='#91e842', GradientType=0 );
+	background: linear-gradient( 180deg, white, #96C56F);
 }
 
  .main-header, .profile, .item, .skills-container, footer {
@@ -320,6 +320,10 @@ footer {
 	.nav {
 		flex-direction: row;
 		justify-content: space-between;
+	}
+	
+	.nav a {
+		width:125px;
 	}
 
 	/*RESPONSIVE PROFILE*/
@@ -406,7 +410,7 @@ footer {
 	
 	.skill-item p {
 		text-align: center;
-		margin-top: 0;
+		margin-top: .5em;
 	}
 
 	.skill-svg {
@@ -434,27 +438,31 @@ footer {
 		display: none;
 	}
 
-	.phone-info, .email-info {
+	.contact-container {
 		display:flex;
-		justify-content: center; 
-	}
-	
-	.phone-info p, .email-info p {
-		margin-top: .5em;
-		margin-bottom: .5em;
+		flex-direction: row;
+		flex-wrap: wrap;
+		width: 300px;
+		height: 50px;
+		margin: 0 auto;
+		align-items: center;
+		justify-content: center;
+		align-content: center;
 	}
 
-	.phone, .email-me {
+	.contact-item {
 		margin-right: 1em;
 	}
 
-	.footer-nav a {
-		margin-left: 1em;
+	.phone, .email-me {
+		margin: .5em;
 	}
-	
+
 	.phone-number, .email-address {
-		align-items: flex-end;
+		font-weight: 600;
+		text-decoration: none;
 	}
+
 }
 
 @media (min-width: 1024px) {
@@ -479,7 +487,7 @@ footer {
 		margin-left: 1em;
 		margin-right: 1em
 	}
-
+	
 	
 	#skills-png {
 	width:20%;
