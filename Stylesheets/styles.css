@@ -1,3 +1,20 @@
+/*FONTS*/
+
+a, p {
+	font-family: Source Sans Pro, Sans Serif;
+}
+
+.about-me, .contact-container p, .nav a, 
+.page-description, .skill-description, 
+.contact-text, .footer-name {
+	font-size: 1.1em;
+}
+
+.nav li a, .footer-nav a {
+	font-size: 1.3em;
+	font-weight: 300;
+}
+
 /*HEADER LAYOUT*/
 
 #name {
@@ -126,7 +143,7 @@ h2{
 
 .title {
 	font-weight: bold;
-	font-size: 120%;
+	font-size: 1.3em;
 	margin-bottom: 0;
 }
 
@@ -254,6 +271,11 @@ footer {
 	display: flex;
 	margin: 0 auto;
 	width: 90%;
+	align-items:center;
+}
+
+.footer-item {
+	display: none;
 }
 
 .footer-name {
@@ -315,15 +337,17 @@ footer {
 	
 	.main-header {
 		justify-content: flex-end;
+
 	}
 
 	.nav {
 		flex-direction: row;
+		flex-wrap: wrap;
 		justify-content: space-between;
 	}
 	
 	.nav a {
-		width:125px;
+		width:100px;
 	}
 
 	/*RESPONSIVE PROFILE*/
@@ -463,23 +487,58 @@ footer {
 		text-decoration: none;
 	}
 
+	.footer-item {
+		display: inline;
+	}
+
+	.to-top {
+		display: none;
+	}
+
 }
 
 @media (min-width: 1024px) {
 	
-	.wrapper {
+		.wrapper {
 		max-width: 1024px;
 		margin-left: auto;
 		margin-right: auto;
 	}
+	
+		.main-logo {
+			padding-top: 0;
+		}
+
+		.nav {
+		flex-direction: row;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+		max-width:95%;
+		align-items: flex-end;
+	}
+
+		#name-png {
+		width:20em;
+		height:5em;
+		margin-right: auto;
+		margin-left: 0;
+
+	}
+		.nav li {
+		width:125px;
+		margin-right: 1em;
+		margin-bottom: -.5em;
+	}
+
+
 
 	.about-me {
 		font-size: 1.75em;
 	}
 
 	#portfolio-png {
-	width:20%;
-	margin: 2em 40% 1em 40%;
+		width:20%;
+		margin: 2em 40% 1em 40%;
 	}
 
 	.item {
@@ -490,12 +549,12 @@ footer {
 	
 	
 	#skills-png {
-	width:20%;
-	margin: 2em 40% 1em 40%;
+		width:20%;
+		margin: 2em 40% 1em 40%;
 	}
 
 	#contact-png {
-	width:20%;
-	margin: 2em 40% 1em 40%;
+		width:20%;
+		margin: 2em 40% 1em 40%;
 	}
 }
